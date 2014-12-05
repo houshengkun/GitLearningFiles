@@ -1,46 +1,49 @@
-1.Git����name��email
+1.Git配置name、email
 
-��װ��ɺ󣬻���Ҫ���һ�����ã������������룺
+安装完成后，还需要最后一步设置，在命令行输入：
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
-��ΪGit�Ƿֲ�ʽ�汾����ϵͳ�����ԣ�ÿ�������������Ա����ţ�������ֺ�Email��ַ����Ҳ���ᵣ�ģ�������˹���ð�������ô�죿������ص��ģ������������Ŵ�Ҷ���������֪��Ⱥ�ڣ���Σ������ð���Ҳ���а취�ɲ�ġ�
+因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。你也许会担心，如果有人故意冒充别人怎么办？这个不必担心，首先我们相信大家都是善良无知的群众，其次，真的有冒充的也是有办法可查的。
 
-ע��git config�����--global���������������������ʾ����̨���������е�Git�ֿⶼ��ʹ��������ã���ȻҲ���Զ�ĳ���ֿ�ָ����ͬ���û�����Email��ַ��
+注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
 
-2.Git ��ʼ��repository
+2.Git 初始化repository
 
 $ cd c:
 $ mkdir GitLearningFiles
 $ cd GitLearningFiles
 $ git init
 
-3.������루�ı���ʽ��Unicode���룩
+3.存入代码（文本格式，Unicode编码）
 
-1���������ļ����뵱ǰ·����
-2��git status�鿴״̬
-3��git add readme.txt ���ļ����ӵ����Ŀ¼
-4��git commit
+1）将代码文件放入当前路径下
+2）git status查看状态
+3）git add readme.txt 将文件添加到监控目录
+4）git commit
 
-4.�޸ģ��ύ�°汾
+4.修改，提交新版本
 
-1���޸Ĵ����ļ�
-2��git add readme.txt ���ļ��������ӵ����Ŀ¼
-3��git commit -m "info to user"
+1）修改代码文件
+2）git add readme.txt 将文件重新添加到监控目录
+3）git commit -m "info to user"
 
-5.���ĵ� $ cat readme.txt
+5.读文档 $ cat readme.txt
 
-6.�汾����
-$ git reset --hard head~n ���˵�n��֮ǰ
+6.版本回退
+$ git reset --hard head~n 回退到n步之前
 
-7.�汾ǰ��
+7.版本前进
 $ git reset --hard commitId
-ʹ��ָ��$ git reflog��ѯ��ʷָ��汾�����commitId
+使用指令$ git reflog查询历史指令（版本变更）commitId
 
-8.���������ݴ���
-��������Working Directory�����������ڵ������ܿ�����Ŀ¼�������ҵ�learngit�ļ��о���һ����������
-�汾�⣨Repository������������һ������Ŀ¼.git��������㹤����������Git�İ汾�⡣
-Git�İ汾������˺ܶණ������������Ҫ�ľ��ǳ�Ϊstage�����߽�index�����ݴ���������GitΪ�����Զ������ĵ�һ����֧master���Լ�ָ��master��һ��ָ���HEAD��
+8.工作区和暂存区
+工作区（Working Directory）：就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区：
+版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
+Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
 
-�ڹ������޸Ĵ����ļ���git add�󣬰��ļ��޸����ӵ��ݴ�����git commit���ݴ����ļ��޸��ύ���汾�⵱ǰ��֧��
+在工作区修改代码文件，git add后，把文件修改添加到暂存区，git commit后，暂存区文件修改提交到版本库当前分支。
 
-9.
+9.查看工作区和版本库最新版本区别
+$ git diff HEAD -- readme.txt
+
+10.
