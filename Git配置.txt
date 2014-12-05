@@ -46,4 +46,7 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 9.查看工作区和版本库最新版本区别
 $ git diff HEAD -- readme.txt
 
-10.
+10. 删除工作区修改
+1）工作区修改未add到暂存区，删除指令：$ git checkout --file，执行后，工作区回退到上次add或commit；
+2）工作区修改add到暂存区，删除指令：$ git reset HEAD file，执行后，暂存区清空，工作区回退到状态1）；
+3）工作区修改commit已提交，删除指令：$ git reset --hard HEAD^1。
