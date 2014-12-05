@@ -50,3 +50,9 @@ $ git diff HEAD -- readme.txt
 1）工作区修改未add到暂存区，删除指令：$ git checkout --file，执行后，工作区回退到上次add或commit；
 2）工作区修改add到暂存区，删除指令：$ git reset HEAD file，执行后，暂存区清空，工作区回退到状态1）；
 3）工作区修改commit已提交，删除指令：$ git reset --hard HEAD^1。
+
+11. 删除文件
+1）$git rm file
+2）$git commit -m "remove file commond"
+
+12. 
