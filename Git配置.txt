@@ -61,3 +61,6 @@ $ git diff HEAD -- readme.txt
 3）第一次推送本地库到远程库origin，指令：$ git push -u origin master；后续推送指令：$ git push origin master
 
 13. 远程仓库（先有远程库，后有本地库）
+1）github注册一个仓库并初始化
+2）获取远程仓库地址git@github.com:houshengkun/TestGitLearningRemote.git
+3）仓库克隆到本地$ git clone git@github.com:houshengkun/TestGitLearningRemote.git
