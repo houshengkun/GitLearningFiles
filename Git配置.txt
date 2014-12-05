@@ -55,9 +55,9 @@ $ git diff HEAD -- readme.txt
 1）$git rm file
 2）$git commit -m "remove file commond"
 
-12. 远程仓库
-github注册一个免费仓库  仓库地址git@github.com:houshengkun/GitLearningFiles.git
-在本地添加远程库，别名为origin
-git remote add origin git@github.com:houshengkun/GitLearningFiles.git
-推送本地库到远程库origin
-git push -u origin master
+12. 远程仓库（先有本地库，后有远程库）
+1）github注册一个免费仓库  仓库地址git@github.com:houshengkun/GitLearningFiles.git
+2）在本地添加远程库，别名为origin，指令：$ git remote add origin git@github.com:houshengkun/GitLearningFiles.git
+3）第一次推送本地库到远程库origin，指令：$ git push -u origin master；后续推送指令：$ git push origin master
+
+13. 远程仓库（先有远程库，后有本地库）
