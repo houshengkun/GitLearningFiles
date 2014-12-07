@@ -69,3 +69,4 @@ $ git diff HEAD -- readme.txt
 15. 测试eclipse下载，从git gui 提交。
     测试成功，eclipse pull命令从服务器下载更新
 16. 测试eclipse上传。
+17. eclipse上传成功，上传步骤，先commit，后push branch......。
