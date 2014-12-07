@@ -67,3 +67,5 @@ $ git diff HEAD -- readme.txt
 
 14. 分支类似于平行宇宙
 15. 测试eclipse下载，从git gui 提交。
+    测试成功，eclipse pull命令从服务器下载更新
+16. 测试eclipse上传。
