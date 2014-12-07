@@ -66,3 +66,4 @@ $ git diff HEAD -- readme.txt
 3）仓库克隆到本地$ git clone git@github.com:houshengkun/TestGitLearningRemote.git
 
 14. 分支类似于平行宇宙
+15. 测试eclipse下载，从git gui 提交。
